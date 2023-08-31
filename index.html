@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página con Contenedor</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  #contenedor {
+    width: 500px;
+    height: 400px;
+    background-color: lightgray;
+    display: flex;
+  }
+  #imagen {
+  width: 200px;
+  height: 400px;
+  text-align: left;
+  justify-content: center;
+    align-items: center;
+  }
+  #cambiarColor {
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+    <div id="contenedor">
+        <h1>Contenido del Contenedor</h1>
+        <img src="img-perfume.jpg" alt="Imagen" div="Imagen">
+        <button id="cambiarColor">Cambiar Color</button>
+      </div>
+<button id="cambiarColor">Cambiar Color</button>
+<script>
+  const contenedor = document.getElementById('contenedor');
+  const cambiarColorButton = document.getElementById('cambiarColor');
+
+  cambiarColorButton.addEventListener('click', () => {
+    const colores = ['red', 'blue', 'green', 'orange', 'purple'];
+    const nuevoColor = colores[Math.floor(Math.random() * colores.length)];
+    contenedor.style.backgroundColor = nuevoColor;
+  });
+</script>
+</body>
+</html>
